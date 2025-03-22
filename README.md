@@ -19,14 +19,14 @@ pip install -r requirements.txt
 
 ```python
 import pandas as pd
-from inference import mpce_predict
+from inference import make_predictions
 
 # Load your data
 household_data = pd.read_csv('path/to/household_data.csv')
 person_data = pd.read_csv('path/to/person_data.csv')
 
 # Get predictions
-predictions = mpce_predict(household_data, person_data)
+predictions = make_predictions(household_data, person_data)
 ```
 
 

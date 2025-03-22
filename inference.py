@@ -3,7 +3,7 @@ import numpy as np
 import lightgbm as lgb
 
 
-def mpce_predict(hh_data_df, pp_data_df):
+def make_predictions(hh_data_df, pp_data_df):
     hh_data_df['NCO_3D'].fillna(963, inplace=True)
     pp_data_df['NIC_5D'].fillna(1110, inplace=True)
 
@@ -104,3 +104,8 @@ def compute_features(group):
     })
 
 
+household_data = pd.read_csv('HH_Test_Data.csv')
+person_data = pd.read_csv('Person_Test_Data.csv')
+
+# Get predictions
+predictions = make_predictions(household_data, person_data)
