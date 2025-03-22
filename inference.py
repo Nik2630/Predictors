@@ -30,7 +30,7 @@ def make_predictions(hh_data_df, pp_data_df):
         master_df = master_df.drop(columns=['TotalExpense'])
 
     # Load the trained model from the file
-    model = lgb.Booster(model_file='mpce_model.txt')
+    model = lgb.Booster(model_file='model.pkl')
     
     # Make predictions
     y_pred = model.predict(master_df)
