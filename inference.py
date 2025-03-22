@@ -5,7 +5,7 @@ import lightgbm as lgb
 
 def make_predictions(hh_data_df, pp_data_df):
     hh_data_df['NCO_3D'].fillna(963, inplace=True)
-    pp_data_df['NIC_5D'].fillna(1110, inplace=True)
+    hh_data_df['NIC_5D'].fillna(1110, inplace=True)
 
     hh_data_df.fillna(0, inplace=True)
     pp_data_df.fillna(0, inplace=True)
